@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/userProfileView.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>Profile Page | Borrow-A-Buddy</title>
+</head>
+
+<body>
+<div class="bgImage">
+
+</div>
+<div class="userProfileContainer">
+    <h1 class="greeting__title" style="display: none">Profile</h1>
+    <div id="userProfile">
+        <div id="userProfileSideMobile">
+            <section class="profile">
+
+                <div>
+                    <img th:src="${user.avatar}" alt="user profile image" class="profile__image">
+                </div>
+                <div class="profile__sideBar">
+
+                    <h2 class="profile__name" th:text="${user.firstName}"></h2>
+                    <p class="profile__description" th:text="${user.description}"></p>
+                    <!--                    <img th:src="${user.avatar}" alt="">-->
+                </div>
+            </section>
+        </div>
+        <div id="userProfileMain">
+            <h2 class="userPets__title">Recommended Pets</h2>
+            <p th:text="${noPetsStatement}"></p>
+
+            <section class="userPets">
+
+                <div class="pet__column" th:each="pet:${possiblePets}">
+                    <a th:href="@{'/pets/'+ ${pet.petName}}">
+                        <div class="image__container">
+                            <img th:src="${pet.petImageUrl}" alt="picture of a pet" class="image">
+                            <div class="overlay">
+                                <p class="pet__description" th:text="${pet.petDesc}"></p>
+                            </div>
+                        </div>
+                        <div class="pet__column_title" th:text="${pet.petName}"></div>
+
+
+                    </a>
+                </div>
+                <section class="mobile__pet_carousel">
+                <div class="pet__column_mobile" th:each="pet:${possiblePets}">
+                    <a th:href="@{'/pets/'+ ${pet.petName}}">
+                        <div class="image__container">
+                            <img th:src="${pet.petImageUrl}" alt="picture of a pet" class="image">
+                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                            <div class="overlay">
+                                <p class="pet__description" th:text="${pet.petDesc}"></p>
+                            </div>
+                        </div>
+                        <div class="pet__column_title" th:text="${pet.petName}"></div>
+
+
+                    </a>
+                </div>
+                </section>
+            </section>
+
+            <h2 class="userPets__title">Scheduled Appointments</h2>
+
+            <section class="petAppointments">
+                <ul class="app_item"></ul>
+
+            </section>
+
+
+            <h2 class="userPets__title">Preferences</h2>
+            <div class="preferences">
+                <div class="preference_points">
+                    <p class="user__preferences" th:text="${preferredPet}"></p>
+                    <p class="user__preferences" th:text="${hypoallergenic}"></p>
+                    <p class="user__preferences" th:text="${goodWithKids}"></p>
+                    
+<!--                    <img th:src="${kidsIcon}" alt="good with kids icon">-->
+<!--                    <img th:src="${allergenicIcon}" alt="hypoallergenic icon">-->
+                </div>
+                <div class="icons">
+                    <img th:src="${allergenicIcon}" alt="" class="profile__image">
+                    <img th:src="${kidsIcon}" alt="" class="profile__image">
+
+<!--                    <img th:if="${goodWithKids == null}" src="">-->
+<!--                    <img th:unless="${goodWithKids == null}" src="/images/kidTrue.png">-->
+<!--                    <img th:if="${hypoallergenic == null}" src="">-->
+<!--                    <img th:unless="${hypoallergenic == null}" src="/images/hypoTrue.png">-->
+                </div>
+            </div>
+        </div>
+
+
+        <div id="userProfileSide">
+            <section class="profile">
+
+                <div>
+
+                    <img th:src="${user.avatar}" alt="user profile image" class="profile__image">
+                </div>
+                <div class="profile__sideBar">
+
+                    <h2 class="profile__name" th:text="${user.firstName}"></h2>
+                    <p class="profile__description" th:text="${user.description}"></p>
+                    <!--                    <img th:src="${user.avatar}" alt="">-->
+                </div>
+            </section>
+        </div>
+
+
+    </div>
+
+</div>
+<script src="/js/profileView.js"></script>
+<script src="/js/NavGenerator.js"></script>
+</body>
+
+</html>

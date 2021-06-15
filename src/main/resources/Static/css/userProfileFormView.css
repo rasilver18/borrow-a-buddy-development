@@ -1,0 +1,325 @@
+::placeholder {
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: #ffc600;
+}
+
+.greeting {
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    font-weight: 900;
+    text-shadow: -1.8px 0 #dc4405, 0 0px #dc4405, 0px 0 #dc4405, 0 -1.8px #dc4405;
+    line-height: 5rem;
+    text-transform: uppercase;
+}
+
+.greeting__text {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 1.5rem 0rem 2rem 0rem;
+    color: #322923;
+    line-height: 2rem;
+}
+
+.firstLine {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.firstName {
+    padding-bottom: 2rem;
+    outline: none;
+}
+
+input {
+    font-size: 1rem;
+    vertical-align: middle;
+    padding: .75rem;
+    font-family: "Raleway", sans-serif;
+    background-color: #fff;
+    border: none;
+}
+
+
+
+
+
+
+.firstName input {
+    width: 90%;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.38);
+}
+
+.lastName {
+    padding-bottom: 2rem;
+    outline: none;
+}
+
+.lastName input {
+    width: 100%;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.38);
+}
+
+.secondLine {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.age input {
+    width: 90%;
+    font-weight: 300;
+    outline: none;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.38);
+}
+
+.email {
+    padding-bottom: 2rem;
+}
+
+.email input {
+    width: 90%;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.38);
+}
+
+.location {
+    padding-bottom: 2rem;
+}
+
+.location input {
+    width: 100%;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.38);
+}
+
+.thirdLine {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.thirdLineLeft {
+    width: 90%;
+}
+
+.dropDown {
+    width: 100%;
+    vertical-align: middle;
+    padding: .65rem;
+    font-family: "Raleway", sans-serif;
+    background-color: #fff;
+    font-weight: 900;
+    color: #ffc600;
+    font-size: 1.2rem;
+    text-align: left;
+    outline: none;
+    line-height: 5rem;
+    margin-bottom: .75rem;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.38);
+}
+
+select {
+    border: none;
+}
+
+select option:disabled {
+    background-color: #ffc600;
+    color: white;
+    font-weight: 900;
+    padding: .5rem 0rem .5rem 0rem;
+}
+
+select option {
+    line-height: 10rem;
+}
+
+.petAttributes {
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.38);
+}
+
+.petAttributesTitle {
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: #ffc600;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.thirdLineRight {
+    background-color: white;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.38);
+}
+
+.description {
+    width: 100%;
+    outline: none;
+    background-color: white;
+}
+
+
+.fourthLine {
+    background-color: white;
+    margin-top: 1rem;
+    vertical-align: center;
+    border: none;
+    -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.38);
+    -moz-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.38);
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.38);
+
+}
+
+.image {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+}
+
+.image__title {
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: #ffc600;
+    border: none;
+    vertical-align: middle;
+    margin-top: -2.45rem;
+    padding-left: .75rem;
+}
+
+p {
+    padding-top: 3rem;
+    font-size: 25px;
+}
+
+
+input[type=file] {
+    background-color: #dc4405;
+    border: none;
+    color: white;
+    margin-left: 1rem;
+
+}
+
+::-webkit-file-upload-button {
+    background: #dc4405;
+    color: white;
+    font-weight: 900;
+    outline: none;
+    border: none;
+}
+
+.greeting{
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    font-weight: 900;
+    text-shadow: -1.8px 0 #dc4405, 0 0px #dc4405, 0px 0 #dc4405, 0 -1.8px #dc4405;
+    line-height: 5rem;
+    text-transform: uppercase;
+}
+
+.greeting__text{
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 1.5rem 0rem 2rem 0rem;
+    color: white;
+    line-height: 2rem;
+}
+
+.image__Jpeg_Warning{
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.avatar__select{
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+.avatars{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.submit {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.submitButtonSquare {
+
+    background-color: #dc4405;
+    color: white;
+    padding: 1rem 5rem;
+    margin-bottom: 20px;
+    font-size: 1.75rem;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: inline-block;
+    margin-top: 30px;
+}
+
+@media screen AND (max-width:768px) {
+    .greeting{
+        line-height: 3rem;
+    }
+
+    .avatars {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .greeting__text{
+        margin-top: -2.5rem
+    }
+
+    .firstLine{
+        grid-template-columns: 1fr;
+    }
+
+    .firstName input{
+        width: 100%;
+    }
+
+    .firstName, .lastName{
+        padding-bottom: 1rem;
+    }
+
+    .secondLine{
+        grid-template-columns: 1fr;
+    }
+
+    .age input, .email input, .location input{
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .location{
+        padding-bottom: 0rem }
+
+    .email{
+        padding-bottom: 0rem;
+    }
+
+    .thirdLine{
+        grid-template-columns: 1fr;
+    }
+
+    .thirdLineLeft{
+        width: 100%;
+    }
+
+    .petAttributes{
+        margin-bottom: 1rem;
+    }
+
+    .dropDown{
+        margin-bottom: 1rem;
+    }
+
+    .submitButtonSquare{
+        font-size: 1.25rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+}

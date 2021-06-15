@@ -1,0 +1,138 @@
+.mainContacts {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.greeting {
+    font-size: 4.5rem;
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    font-weight: 900;
+    text-shadow: -1.8px 0 #dc4405, 0 0px #dc4405, 0px 0 #dc4405, 0 -1.8px #dc4405;
+    line-height: 5rem;
+    text-transform: uppercase;
+}
+
+.greeting__text {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 1.5rem 0rem 2rem 0rem;
+    color: #322923;
+    line-height: 2rem;
+}
+
+.contactBoxes {
+    width: 100%;
+    display: grid;
+    margin-top: 2rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-bottom: 25vh;
+    margin-top: 2rem;
+}
+
+.contactUs, .usefulLinks, .map_box {
+
+    margin: 0 20px 20px 20px;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.38);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.centered-headline {
+    text-align: center;
+    color: #ffc600;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    margin: 1rem;
+}
+
+.contactBox {
+    padding: 1rem;
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+.contactBox p {
+    text-align: center;
+}
+
+
+.subhead {
+    text-align: center;
+    color: #ffc600;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.contact__link{
+    color: #ffc600;
+    text-align: center;
+    font-weight: 500;
+}
+
+
+.map {
+    width: 100%;
+    outline: solid 5px #ffc600;
+    margin: .75rem 0rem 2rem 0rem;
+}
+
+/* On screens that are 993px or wider, 3 columns */
+@media screen and (min-width: 993px) {
+    .contactBoxes {
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 80vw;
+    }
+}
+
+/* On screens that are 992px wide or less, go from three columns to two columns */
+@media screen and (max-width: 992px) {
+    .contactBoxes {
+        grid-template-columns: 1fr;
+    }
+
+    .contactBox {
+    padding: 1rem;
+        text-align: center;
+        line-height: 2.5rem;
+    }
+
+    .contact__link{
+        padding: 0;
+    }
+
+    .contactUs, .map_box {
+
+        margin: 0 20px 20px 20px;
+        padding: 1rem;
+        background-color: white;
+        box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.38);
+        display: flex;
+        flex-direction: column;
+        align-items: unset;
+    }
+
+    .usefulLinks{
+        margin: 0 20px -430px 20px;
+        padding: 1rem;
+        background-color: white;
+        box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.38);
+        display: flex;
+        flex-direction: column;
+        align-items: unset;
+    }
+}
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .contactBoxes {
+        grid-template-columns: 1fr;
+        /*flex-direction: column;*/
+    }
+}

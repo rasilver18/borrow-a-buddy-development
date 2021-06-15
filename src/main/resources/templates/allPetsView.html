@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/allPetsView.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <title>Our Pets | Borrow-A-Buddy</title>
+</head>
+<body>
+
+
+<div class="bgImage">
+
+</div>
+<div class="container">
+
+
+
+    <h1 class="allPets__title">Check Out Our Pets!</h1>
+    <p class="greeting__text">We have a variety of pets to choose from to meet your interests!</p>
+    <p class="mobile_greeting__text">Click on a pets picture to learn a little more about them or click their name for a full bio!</p>
+
+
+    <section class="allPets">
+
+        <div class="pet__column" th:each="pet:${allPets}">
+            <a th:href="@{'/pets/'+ ${pet.petName}}">
+
+                <div class="image__container">
+                    <img th:src="${pet.petImageUrl}" alt="picture of a pet" class="image">
+                    <div class="overlay">
+                        <p class="pet__description" th:text="${pet.petDesc}"></p>
+                    </div>
+                </div>
+
+                <div class="pet__column_title" th:text="${pet.petName}"></div>
+
+
+            </a>
+        </div>
+
+
+    </section>
+
+    <section class="allPetsMobile" id="allPetsMobile">
+        <div class="petCarousel" th:each="pet:${allPets}">
+
+            <div class="image__container">
+                <img th:src="${pet.petImageUrl}" alt="picture of a pet" class="image">
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <div class="overlay">
+                    <p class="pet__description" th:text="${pet.petDesc}"></p>
+
+
+
+                </div>
+            </div>
+            <a th:href="@{'/pets/'+ ${pet.petName}}">
+                <div class="pet__column_title" th:text="${pet.petName}"></div>
+            </a>
+
+
+        </div>
+
+
+
+    </section>
+
+
+</div>
+
+<script src="/js/NavGenerator.js"></script>
+<script src="/js/allPets.js"></script>
+
+</body>

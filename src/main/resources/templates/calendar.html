@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<div xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <title>Schedule an Appointment | Borrow-A-Buddy</title>
+        <link rel="stylesheet" href="/css/nav.css">
+        <link rel="stylesheet" href="/css/main.css">
+        <link href="/css/calendar.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+              integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+              crossorigin="anonymous">
+    </head>
+
+    <div class="bgImage">
+    </div>
+
+    <div class="container">
+        <div id="calendarContent">
+
+            <section id="scheduleMain">
+                <h1>Schedule an Appointment</h1>
+                <article class="appointment">
+
+                    <form class="listForm" action="PayslipServlet" method="get">
+                        <!--                            Last name:    <input type="text" name="lname" id="lname"><br/>-->
+                        <!--                            First name:   <input type="text" name="fname" id="fname"><br/>-->
+                        <!--                            Middle name:  <input type="text" name="mname" id ="mname"><br/>-->
+                        <!--                            Name: <span id="result"></span>-->
+                        <!--                            <br>-->
+                        <!--                            <input type="button" value="Submit" onClick="pr()">-->
+                        <!--                        </form>-->
+
+                        <!--            OUR FORM-->
+                        <div class="first__row">
+<!--                            <div>-->
+                                <div class="scheduleSelect">Select a pet:</div>
+
+                                <div class="pet">
+                                    <select id="pet" name="pet">
+                                        <option th:value="${petItem.petName}" th:each="petItem:${allPets}"
+                                                th:text="${petItem.petName}"></option>
+                                        <br>
+                                    </select>
+                                </div>
+                            </div>
+
+<!--                            <div>-->
+
+                                <div class="second__row">
+                                    <div>
+                                        <div class="scheduleSelect">Select a date:
+                                        </div>
+                                        <label for="date">
+
+                                            <input type="date" id="date" name="trip-start"
+                                                   value="2020-12-01"
+                                                   min="2020-01-01" max="2022-12-31">
+                                        </label>
+
+                                    </div>
+
+                                    <div>
+                                        <div class="scheduleSelect">Select a start time:</div>
+                                        <select id="time">
+                                            <option value="8:00 am">8:00 am</option>
+                                            <option value="9:00 am">9:00 am</option>
+                                            <option value="10:00 am">10:00 am</option>
+                                            <option value="11:00 am">11:00 am</option>
+                                            <option value="12:00 pm">12:00 pm</option>
+                                            <option value="1:00 pm">1:00 pm</option>
+                                            <option value="2:00 pm">2:00 pm</option>
+                                            <option value="3:00 pm">3:00 pm</option>
+                                            <option value="4:00 pm">4:00 pm</option>
+                                            <option value="5:00 pm">5:00 pm</option>
+                                            <option value="6:00 pm">6:00 pm</option>
+                                            <option value="7:00 pm">7:00 pm</option>
+                                        </select>
+                                    </div>
+
+                                    <div>
+                                        <div class="scheduleSelect">Select a duration:</div>
+                                        <select id="duration">
+                                            <option value="1 hour">1 hour</option>
+                                            <option value="2 hours">2 hours</option>
+                                            <option value="3 hours">3 hours</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                                <!--            <input type="submit" class="listForm__submit">-->
+
+                                <div class="submit__button">
+                                    <input type="button" id="submit" value="Submit" onClick="addItem()">
+                                </div>
+                                <!--            <input type="text" class="item-form__name" placeholder="Add an item" />-->
+                                <!--            <input type="submit" class="item-form__submit" />-->
+                                <!--            <input type='submit' value='Save' onclick='pr()'/>-->
+                                <!--            <input type='button' value='Delete' onclick='cal.del()'/>-->
+
+                                <!--            onclick='cal.save()-->
+                    </form>
+                </article>
+
+                <div class="addAppointments">Add your scheduled appointments to the calendar.</div>
+
+                <article class="calendar">
+                    <div id="cal-wrap">
+
+                        <!-- [PERIOD SELECTOR] -->
+                        <div id="cal-date">
+                            <select id="cal-mth"></select>
+                            <select id="cal-yr"></select>
+                            <input id="cal-set" type="button" value="SET"/>
+                        </div>
+
+                        <!-- [CALENDAR] -->
+                        <div id="cal-container"></div>
+
+                        <!-- [EVENT] -->
+                        <div id="cal-event"></div>
+                    </div>
+                </article>
+
+            </section>
+
+
+            <section id="appointmentSide">
+
+                <article class="appointmentDetails">
+                    <h2>Appointment Details</h2>
+                    <ul class="item-list"></ul>
+                    <span id="result"></span>
+                    <br>
+                </article>
+            </section>
+        </div>
+    </div>
+
+
+    <script src="/js/NavGenerator.js"></script>
+    <script src="/js/calendar.js"></script>
+    <script src="/js/profileView.js"></script>
+    </body>
+    </html>

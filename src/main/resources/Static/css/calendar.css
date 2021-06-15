@@ -1,0 +1,261 @@
+::placeholder {
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: #ffc600;
+}
+input {
+  font-size: 1rem;
+  vertical-align: middle;
+  background-color: #fff;
+  border: none;
+}
+#scheduleMain {
+  width: 90%;
+}
+#appointmentSide {
+  width: 90%;
+}
+#calendarContent{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+.appointmentDetails {
+  width: 100%;
+}
+.appointment{
+  background-color: #fff;
+  margin-bottom: 2rem;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.38);
+}
+.addAppointments{
+  color: #322923;
+  margin: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+.listForm {
+  padding: 1rem;
+}
+#cal-date { display: flex; }
+#cal-mth, #cal-yr, #cal-set {
+  box-sizing: border-box;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border: 0;
+  color: #fff;
+}
+#cal-mth, #cal-yr { background: #dc4405; }
+#cal-set { background: #7ce0d3; }
+#calendar {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+}
+#calendar tr.head td {
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #fff;
+  background: #dc4405;
+  padding: 15px;
+  text-align: center;
+}
+#calendar tr.day td {
+  border: 1px solid #ddd;
+  width: 14.28%;
+  padding: 15px 5px;
+  vertical-align: top;
+}
+#calendar tr.day td:hover {
+  background: #fff9e4;
+  cursor: pointer;
+}
+#calendar tr td.blank {
+  background: #f5f5f5;
+}
+#calendar .dd {
+  font-size: 1.2em;
+  color: #322923;
+}
+#calendar .evt {
+  margin-top: 5px;
+  font-size: 0.8em;
+  font-weight: 900;
+  overflow: hidden;
+  color: #dc4405;
+}
+#cal-event {
+  margin-bottom: 20vh;
+}
+/* [ADD/EDIT EVENT] */
+#cal-event form {
+  padding: 15px;
+  margin-top: 20px;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+}
+#cal-event h1 {
+  color: #333;
+  padding: 0;
+  margin: 0;
+}
+#evt-date {
+  color: #999;
+  margin: 10px 0;
+}
+#cal-event textarea {
+  display: block;
+  box-sizing: padding-box;
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  resize: none;
+}
+#cal-event input[type=button], #cal-event input[type=submit] {
+  padding: 10px;
+  margin: 5px;
+  font-size: 1.2em;
+  border: 0;
+  background: #7ce0d3;
+  color: #fff;
+}
+h1{
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+  font-weight: 900;
+  /*text-shadow: -1.8px 0 #dc4405, 0 0px #dc4405, 0px 0 #dc4405, 0 -1.8px #dc4405;*/
+  line-height: 5rem;
+  text-transform: uppercase;
+}
+h2{
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 40px;
+  color: white;
+  font-weight: 900;
+  text-shadow: -1.8px 0 #dc4405, 0 0px #dc4405, 0px 0 #dc4405, 0 -1.8px #dc4405;
+  text-transform: uppercase;
+}
+
+/*label {*/
+/*  display: block;*/
+/*}*/
+/*input,*/
+/*label {*/
+/*  margin: .4rem 0;*/
+/*}*/
+
+.hidden {
+  display:none;
+}
+.item-list__item {
+  display: grid;
+  font-size: 0.85rem;
+  grid-template-columns: auto 1rem;
+  list-style-type: none;
+  margin: 1rem 0.5rem;
+  padding: 1rem;
+  line-height: 1.25rem;
+  border-style: solid;
+  border-color: rgba(255,255,255,1);
+  background-color: #fff;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.38);
+}
+.item-list__delete {
+  height: 1rem;
+  width: 1rem;
+  grid-row: 1;
+  grid-column: 2;
+  margin-top: -0.5rem;
+  margin-right: -0.2rem;
+  float: right;
+  border-radius: 5px;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+  color: #666666;
+  border-color: #666666;
+  opacity: 0.5;
+  -webkit-box-shadow: inset 0px 0px 4px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: inset 0px 0px 4px 0px rgba(0,0,0,0.5);
+  box-shadow: inset 0px 0px 4px 0px rgba(0,0,0,0.5);
+}
+.item-list__delete:hover {
+  -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0);
+  -moz-box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0);
+  box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0);
+  transition: 0.2s;
+}
+.item-list__delete:active {
+  -webkit-box-shadow: inset 0px 0px 8px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: inset 0px 0px 8px 0px rgba(0,0,0,0.5);
+  box-shadow: inset 0px 0px 8px 0px rgba(0,0,0,0.5);
+}
+.calendar {
+  background-color: #ffffff;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.38);
+}
+
+.second__row{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+select{
+  background-color: #dc4405;
+  border: none;
+  color: white;
+  width: 90%;
+  padding: .5rem;
+  margin-bottom: 1rem;
+  margin-top: .5rem;
+  text-transform: uppercase;
+}
+
+input[type=date] {
+  background-color: #dc4405;
+  border: none;
+  color: white;
+  width: 90%;
+  padding: .45rem;
+  margin-top: .5rem;
+}
+
+input[type=button] {
+  background-color: #dc4405;
+  border: none;
+  color: white;
+  width: 50%;
+  padding: .45rem;
+  margin-top: .5rem;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.pet select {
+  width: 97%;
+
+}
+
+/*.submit__button{*/
+/*  background-color: #dc4405;*/
+/*  border: none;*/
+/*  color: white;*/
+/*  width: 90%;*/
+/*  padding: .45rem;*/
+/*  margin-top: .5rem;*/
+
+/*}*/
+
+/*input[type=label] {*/
+/*background-color: #dc4405;*/
+/*border: none;*/
+/*color: white;*/
+/*width: 90%;*/
+/*!*margin-left: 1rem;*!*/
+
+/*}*/

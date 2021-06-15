@@ -1,0 +1,354 @@
+
+#userProfile { display: flex; }
+
+#userProfileMain {
+    width: 70%;
+    background: #ffffff;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.3);
+}
+#userProfileSide {
+    position: fixed;
+    right: 2vw;
+    width: 30%;
+    background-color: #ffc600;
+    height: 75vh;
+    margin-left: 3rem;
+    -webkit-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.3);
+}
+
+.userProfileContainer{
+    margin: 15vh auto 15vh auto;
+    max-width: 60rem;
+    width: 90%;
+}
+
+.greeting{
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    font-weight: 900;
+    text-shadow: -1.8px 0 #dc4405, 0 0px #dc4405, 0px 0 #dc4405, 0 -1.8px #dc4405;
+    line-height: 5rem;
+    text-transform: uppercase;
+}
+
+.greeting__text{
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0rem 0rem 0rem 0rem;
+    color: white;
+    line-height: 2rem;
+}
+
+.profile{
+    color: #fff;
+
+}
+
+.profile__sideBar{
+    display: flex;
+    flex-direction: column;
+    margin: 2.5rem 1rem 3rem 2rem;
+}
+
+.profile__image {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 3rem;
+    border-radius: 50%;
+    border: solid 5px white;
+}
+
+.profile__name{
+    text-align: left;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 900;
+}
+
+.profile__description{
+    text-align: left;
+    color: #ffffff;
+    font-size: .9rem;
+    line-height: 1.5rem;
+}
+
+.userUpdate__button{
+    text-align: center;
+    background-color: #666666;
+    color: white;
+    padding: 25px 100px;
+    border-radius: 10rem;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: inline-block;
+
+}
+
+.center__button{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.userPets__title{
+    text-align: left;
+    margin: 2rem 0rem .25rem .5rem;
+    text-transform: uppercase;
+    color: #ffc600;
+    font-weight: 900;
+}
+
+.user__preferences  {
+    text-align: left;
+    margin: 1rem 0rem .25rem .5rem;
+}
+.userPets{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.image__container {
+    position: relative;
+    width: 100%;
+}
+
+.image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #dc4405;
+    border-bottom: #fff solid .125rem;
+}
+
+.image__container:hover .overlay {
+    opacity: 1;
+}
+
+.overlay__text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.pet__column{
+    margin: 1rem;
+}
+
+.pet__column_title{
+    text-align: center;
+    color: #fff;
+    padding: .5rem;
+    background-color: #dc4405;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.app_item{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /*grid-row-gap: 1rem;*/
+    text-decoration: none;
+    text-align: center;
+    padding: 0 1rem;
+    padding:1rem 0;
+}
+
+.app_item__item {
+    margin: 1rem;
+    color: #fff;
+    background-color: #666;
+    padding: 1rem;
+    list-style-type: none;
+}
+
+.pet__column_image{
+    text-align: center;
+    height: auto;
+    max-width: 100%;
+}
+
+.pet__description{
+    font-size: 1rem;
+    padding: 1rem;
+    color: #fff;
+    line-height: 1.5rem;
+    overflow: auto;
+}
+.preferences {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    padding: 1rem;
+}
+.preference_points {
+    display: flex;
+    flex-direction: column;
+    background-color: #666666;
+    color: white;
+    padding: 0 1rem 1rem 1rem;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+}
+
+
+.icons > img {
+    height: 50%;
+}
+
+/*.petAppointments {*/
+/*    !*display: flex;*!*/
+/*    !*flex-wrap: wrap;*!*/
+/*    display: grid;*/
+/*    grid-template-columns: 1fr 1fr 1fr;*/
+/*}*/
+
+#userProfileSideMobile{
+    display: none;
+}
+
+.mobile__pet_carousel{
+    display: none;
+}
+
+@media screen AND (max-width:768px) {
+    #userProfileSide{
+        display: none;
+    }
+
+    #userProfileSideMobile{
+        display: flex;
+        box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.3);
+        width: 95%;
+        background-color: #ffc600;
+        height: auto;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+        margin-top: 2rem;
+    }
+
+    #userProfile{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    #userProfileMain{
+        width: 95%;
+        margin-right: 2.5%;
+        margin-left: 2.5%;
+        margin-top: -.05rem;
+
+    }
+
+    .pet__column_mobile{
+        margin: 0rem;
+        background-color: #dc4405;
+        position: relative;
+        overflow: visible;
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+    }
+
+    .mobile__pet_carousel{
+        display: flex;
+    }
+
+    .image{
+        margin-top: -2.41rem;
+    }
+
+    .profile{
+        width: 100%;
+    }
+
+    .pet__column{
+        display: none;
+    }
+
+    .userPets{
+        grid-template-columns: 1fr;
+    }
+
+    /* Next & previous buttons */
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 7px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 31px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        z-index: 5;
+        background-color: #dc4405;
+
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+    .petAppointments{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 95%;
+        margin-left: auto;
+    }
+
+    .image__container:hover .overlay{
+        height: 101%;
+        margin-top: -1.22rem;
+    }
+
+    .icons {
+        flex-direction: column-reverse;
+    }
+
+    .app_item{
+        grid-template-columns: 1fr 1fr;
+    }
+
+}

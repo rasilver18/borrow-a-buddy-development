@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--<html xmlns:th="http://www.thymeleaf.org">-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/userProfileFormView.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>Create Your Profile | Borrow-A-Buddy</title>
+
+</head>
+
+<body>
+<div class="bgImage"></div>
+<div class="container">
+
+        <h1 class="greeting">Create Your Profile</h1>
+        <p class="greeting__text">Answer a few short questions to be matched with your buddy.</p>
+
+
+
+    <form action="/add-user" method="POST">
+
+        <div class="firstLine">
+            <div class="firstName">
+                <input placeholder="First name *" type="text" id="firstName" name="firstName" required/><br>
+            </div>
+            <div class="lastName">
+                <input placeholder="Last name *" type="text" id="lastName" name="lastName" required/><br>
+            </div>
+        </div>
+
+        <div class="secondLine">
+            <div class="age">
+                <input placeholder="Age *" type="number" id="age" name="age" min="18" max="99" required/>
+            </div>
+            <div class="email">
+                <input placeholder="Email *" type="email" id="email" name="email" required/>
+            </div>
+            <div class="location">
+                <input placeholder="City *" type="text" id="location" name="location" required/><br>
+            </div>
+        </div>
+        <div class="thirdLine">
+            <div class="thirdLineLeft">
+
+
+                <select name="primaryReason" class="dropDown" id="reasons__dropdown" for="petReasons">
+                    <div class="pet__options">
+                        <div class="pet__options_header">
+
+
+                            <option selected="selected" disabled="disabled">Reason for borrowing</option>
+                        </div>
+                        <option value="For Play">For Play</option>
+                        <option value="For Companionship">For Companionship</option>
+                        <option value="For Therapy">For Therapy</option>
+                    </div>
+                </select>
+
+                <select name="preferredPetType" class="dropDown" id="pet__dropdown" for="petReasons">
+                    <div class="pet__options">
+                        <div class="pet__options_header">
+
+
+                            <option selected="selected" disabled="disabled">Type of pet you prefer</option>
+                        </div>
+                        <option value="Dog">Dog</option>
+                        <option value="Cat">Cat</option>
+                        <option value="Rabbit">Rabbit</option>
+                        <option value="Mini Horse">Mini Horse</option>
+                        <option value="Lizard">Lizard</option>
+                    </div>
+                </select>
+
+
+                <div class="petAttributes">
+                    <div class="petAttributesTitle">Do you have any special requirements for the pet?</div>
+                    <div class="petAttributesOptions">
+
+                        <input type="checkbox" id="Hypoallergenic" name="allergyRequirement">
+                        <label for="Hypoallergenic">Hypoallergenic</label><br>
+                        <input type="checkbox" id="Good-with-kids" name="goodWithKidsRequirement">
+                        <label for="Good-with-kids">Good with kids</label><br>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="thirdLineRight">
+
+
+                <input placeholder="Tell us about yourself *" type="text area" class="description" name="description"
+                       required>
+
+            </div>
+        </div>
+
+<!--        <div class="fourthLine">-->
+            <div>
+
+            <div name="avatarImage" id="avatar__image">
+                <div>
+                    <div>
+                        <p class="avatar__select">Select a profile image:</p>
+                    </div>
+
+                    <div class="avatars">
+
+                    <div>
+                    <input id="avatarList1" type="radio" name="avatar" value="avatar1"><img src="/images/buddyAvatars1.png" height="190" width="190"></input>
+                    </div>
+
+                        <div>
+                        <input id="avatarList2" type="radio" name="avatar" value="avatar2"><img src="/images/buddyAvatars2.png" height="190" width="190"></input>
+                        </div>
+                        <div>
+                            <input id="avatarList3" type="radio" name="avatar" value="avatar3"><img src="/images/buddyAvatars3.png" height="190" width="190"></input>
+                        </div>
+                        <div>
+                            <input id="avatarList4" type="radio" name="avatar" value="avatar4"><img src="/images/buddyAvatars4.png" height="190" width="190"></input>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="submit">
+
+            <button class="submitButtonSquare">Submit My Profile</button>
+        </div>
+
+    </form>
+</div>
+</form>
+</div>
+</body>
+
+<img src="images/BAB_animalsRight.png" alt="A line of animal silhouettes" class="footer-animalsRight">
+<img src="images/BAB_animalsLeft.png" alt="A line of animal silhouettes" class="footer-animalsLeft">
+
+<script src="/js/NavGeneratorHome.js"></script>
+<script src="/js/profileForm.js"></script>
+</body>
+
+</html>

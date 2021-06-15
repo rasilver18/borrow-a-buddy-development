@@ -1,0 +1,204 @@
+.allPets__title{
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    font-weight: 900;
+    text-shadow: -1.8px 0 #dc4405, 0 0px #dc4405, 0px 0 #dc4405, 0 -1.8px #dc4405;
+    line-height: 5rem;
+    text-transform: uppercase;
+}
+
+.greeting__text{
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 1.5rem 0rem 2rem 0rem;
+    color: #322923;
+    line-height: 2rem;
+}
+
+.mobile_greeting__text{
+    display: none;
+}
+
+.pet__column{
+    margin: .5rem;
+    background-color: #dc4405;
+}
+
+.pet__column_title{
+    text-align: center;
+    color: #fff;
+    margin: .75rem 0rem 0rem 0rem;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.allPets{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 25px;
+}
+
+.allPetsMobile{
+    display: none;
+}
+
+.image__container {
+    position: relative;
+    width: 100%;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    /*height: 250px;*/
+    text-align: center;
+    margin-top: -25px;
+}
+
+#singlePet {
+    width: 100%;
+    height: 300px;
+    text-align: center;
+}
+
+
+.image__container:hover .overlay {
+    opacity: 1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #dc4405;
+    border-bottom: #fff solid .125rem;
+}
+
+
+.overlay__text {
+    color: white;
+    font-size: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+.pet__column_image{
+    text-align: center;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    border-color: #dc4405;
+
+}
+
+.pet__description{
+    height: 100%;
+    text-align: center;
+    padding: .5rem 1rem .5rem 1rem;
+    line-height: 1.5rem;
+    color: #fff;
+}
+
+
+
+
+@media only screen and (max-width: 767px){
+
+    .container{
+        padding-top: 10rem;
+    }
+
+    .profile{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .userPets{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .mobile_greeting__text{
+        font-size: 1.5rem;
+        text-align: center;
+        margin: 0rem 0rem 2rem 0rem;
+        color: white;
+        line-height: 2rem;
+        display: flex;
+    }
+
+    .greeting__text{
+        display: none;
+    }
+
+    .allPets{
+        display: none;
+    }
+
+    .allPetsMobile{
+        display: flex;
+    }
+
+    .container{
+        padding-top: 1rem;
+    }
+
+    .petCarousel{
+        margin: .5rem;
+        background-color: #dc4405;
+        position: relative;
+        overflow: visible;
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Next & previous buttons */
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 7px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 31px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        z-index: 5;
+        background-color: #dc4405;
+
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+
+
+
+}
+

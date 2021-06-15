@@ -1,0 +1,173 @@
+.safetyPage {
+    margin-bottom: 10%;
+    margin-top: -10%;
+}
+
+#pageTitle {
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 10%;
+    color: white;
+    text-shadow: -1.8px 0 #dc4405, 0 0px #dc4405, 0px 0 #dc4405, 0 -1.8px #dc4405;
+    line-height: 5rem;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+
+.safety__Commentary {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 1.5rem 0rem 2rem 0rem;
+    color: #322923;
+    line-height: 2rem;
+}
+
+.safety__Body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 15%;
+}
+
+.accordion__Box_1 {
+    background-color: white;
+    width: 95%;
+    padding: 1rem 1rem 0.5rem 1rem;
+    margin-left: 2.5%;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.38);
+}
+
+.accordion__Box_2 {
+    background-color: white;
+    width: 95%;
+    padding: 1rem 1rem 0.5rem 1rem;
+    margin-left: 2.5%;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.38);
+}
+
+.accordion__Top_Commentary {
+    font-weight: 700;
+    padding: .75rem .5rem 1rem .5rem;
+    line-height: 150%;
+    font-size: 1.15rem;
+}
+
+.accordion {
+    background-color: #dc4405;
+    color: white;
+    cursor: pointer;
+    padding: 1rem;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    transition: 0.4s;
+    margin-bottom: .5rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.active, .accordion:hover {
+    background-color: white;
+    color: #dc4405;
+    border: .1rem solid #dc4405;
+}
+
+.arrow {
+    box-sizing: border-box;
+    height: 1.3rem;
+    width: 1.3rem;
+    border-style: solid;
+    border-color: white;
+    border-width: 0rem .25rem .25rem 0rem;
+    transform: rotate(45deg);
+    transition: border-width 150ms ease-in-out;
+    margin-left: 91%;
+    margin-top: -7%;
+    margin-bottom: 1.5%;
+}
+
+
+.accordion:hover .arrow {
+    border-color: #dc4405;
+}
+
+
+.active .arrow {
+    border-color: #dc4405;
+    border-width: 0.25rem 0rem 0rem 0.25rem;
+    margin-left: 91%;
+    margin-top: -5%;
+    margin-bottom: -2%;
+}
+
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+    margin-bottom: .5rem;
+    line-height: 175%;
+}
+
+
+ol {
+    list-style-type: none;
+}
+
+li {
+    margin-bottom: 1rem;
+}
+
+
+@media screen and (max-width: 992px) {
+    .safety__Body {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-bottom: 15%;
+
+    }
+
+    .accordion__Box_1{
+        margin-bottom: 1.5rem;
+    }
+
+    .safety__Commentary{
+        font-size: 1.2rem;
+    }
+
+    .accordion__Top_Commentary {
+        font-size: .75rem;
+    }
+
+    .accordion__Box {
+        margin-bottom: 2rem;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .accordion{
+        padding: 1.5rem;
+        margin-bottom: .75rem;
+        padding-bottom: 2.5rem;
+        font-size: 1.7rem;
+    }
+
+    .arrow{
+        margin-top: -3%;
+        margin-bottom: -1.5%;
+    }
+
+    .active .arrow{
+        margin-top: -2%;
+        margin-bottom: -3.5%;
+    }
+
+    .panel {
+        font-size: .75rem;
+        line-height: 150%;
+    }
+
+
+}

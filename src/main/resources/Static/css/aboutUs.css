@@ -1,0 +1,230 @@
+.mainContacts {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.centered-headline {
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    font-weight: 900;
+    text-shadow: -1.8px 0 #dc4405, 0 0px #dc4405, 0px 0 #dc4405, 0 -1.8px #dc4405;
+    line-height: 5rem;
+    text-transform: uppercase;
+}
+
+.greeting__text{
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 1.5rem 0rem 2rem 0rem;
+    color: #322923;
+    line-height: 2rem;
+}
+
+.contactBoxes {
+    width: 100%;
+    display: grid;
+    margin-top: 2rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 350px 350px 350px;
+    padding-bottom: 25vh;
+}
+
+.contactBoxes article {
+    position: static;
+    width: 300px;
+    max-height: 500px;
+    margin: 0 20px 20px 20px;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.38);
+    transition: 1s;
+}
+.contactBoxes article:hover {
+    transform: rotate(0deg);
+    transition: 1s;
+}
+
+#photo__1 {
+    transform: rotate(4deg);
+}
+#photo__2 {
+    transform: rotate(1deg);
+}
+#photo__3 {
+    transform: rotate(1.5deg);
+}
+#photo__4 {
+    transform: rotate(-0.5deg);
+}
+#photo__5 {
+    transform: rotate(0.5deg);
+}
+#photo__6 {
+    transform: rotate(-2deg);
+}
+#photo__7 {
+    transform: rotate(1deg);
+}
+#photo__1:hover, #photo__2:hover, #photo__3:hover, #photo__4:hover, #photo__5:hover, #photo__6:hover, #photo__7:hover {
+    transform: rotate(0deg);
+    transition: 1s;
+    transform: scale(1.2);
+    z-index: 20;
+}
+
+.profile__image {
+    position: relative;
+    z-index: 11;
+    width: 100%;
+    transition: 1s;
+    opacity: 1;
+}
+
+.profile__image:hover {
+    opacity: 0;
+    transition: 1s;
+}
+
+/*.image__container:hover .overlay {*/
+/*    opacity: 1;*/
+/*    transition: 1s;*/
+/*}*/
+
+.contactBox {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 1rem;
+}
+
+.profile__shadow {
+    position: relative;
+    z-index: 10;
+    width: 268px;
+    height: 268px;
+    margin-top: -268px;
+    box-shadow: inset 0px 0px 56px 0px rgba(0,0,0,1);
+}
+
+.profile__image {
+    position: relative;
+    z-index: 9;
+    /*opacity: 1;*/
+    transition: 1s;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    padding: 1rem 1rem 3rem 1rem;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    /*opacity: 0;*/
+    transition: .5s ease;
+    background-color: white;
+    border-bottom: #fff solid .125rem;
+}
+
+.dev__name {
+    text-align: center;
+    color: #ffc600;
+    margin: .75rem;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    position: relative;
+    z-index: 30;
+}
+
+
+
+/* On screens that are 993px or wider, 3 columns */
+@media screen and (min-width: 993px) {
+    .contactBoxes {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+/* On screens that are 992px wide or less, go from three columns to two columns */
+@media screen and (max-width: 992px) {
+    .contactBoxes {
+        grid-template-columns: 1fr;
+    }
+
+    #photo__1 {
+        transform: rotate(0deg);
+        height: 573px;
+        width: 540px;
+    }
+    #photo__2 {
+        transform: rotate(0deg);
+        height: 573px;
+        width: 540px;
+    }
+    #photo__3 {
+        transform: rotate(0deg);
+        height: 573px;
+        width: 540px;
+    }
+    #photo__4 {
+        transform: rotate(0deg);
+        height: 573px;
+        width: 540px;
+    }
+    #photo__5 {
+        transform: rotate(0deg);
+        height: 573px;
+        width: 540px;
+    }
+    #photo__6 {
+        transform: rotate(0deg);
+        height: 573px;
+        width: 540px;
+    }
+    #photo__7 {
+        transform: rotate(0deg);
+        height: 573px;
+        width: 540px;
+    }
+
+    .contactBoxes{
+        display: contents;
+    }
+
+    .contactBoxes article {
+        max-height: 618px;
+    }
+
+    .profile__shadow{
+        width: 507px;
+        height: 495px;
+        margin-top: -508px;
+    }
+
+    .dev__name{
+        font-weight: 700;
+        font-size: 2.15rem;
+    }
+
+    .dev__bio{
+        font-size: 1.9rem;
+        text-align: center;
+    }
+
+    .centered-headline{
+        font-size: 4.5rem;
+    }
+}
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .contactBoxes {
+        grid-template-columns: 1fr;
+        /*flex-direction: column;*/
+    }
+}

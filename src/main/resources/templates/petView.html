@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/singlePetView.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>Pet Details | Borrow-A-Buddy</title>
+
+</head>
+
+
+<div class="bgImage">
+
+</div>
+
+<body>
+
+<div class="container">
+
+    <div id="singlePet">
+
+        <h1 th:text="'Meet ' + ${pet.petName} + '!'" class="single__pet__title"></h1>
+        <!--        <p class="single__pet__description" th:text="${pet.petDesc}"></p>-->
+
+        <section class="userPets">
+
+            <div class="petDetails">
+
+                <div class="single__pet__attributes">
+                    <ul>
+
+
+                        <div class="first__row">
+                        <div class="ribbon">
+                            <div class="attribute__type" th:text="${pet.petType}">
+                            </div>
+                        </div>
+
+                            <div class="attribute__age">
+                                Age: <span th:text="${pet.petAge}">13 February 2011</span>
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="single__pet__description" th:text="${pet.petDesc}"></div>
+
+
+
+
+
+                        <div class="energy__level">
+                            <div class="attribute__energy_low">
+                                I prefer <br> to relax.
+                            </div>
+
+                            <div class="attribute__energy_high">
+                                Get ready <br> to play!
+                            </div>
+                        </div>
+
+
+                        <div class="energy__bar">
+                        <div class="attribute__energy" th:text="${pet.petTemperament}">
+                        </div>
+                            <div id="energy__two" class="attribute__energy">
+                            </div>
+                            <div id="energy__three" class="attribute__energy">
+                            </div>
+<!--                            <div id="energy__four" class="attribute__energy">-->
+<!--                            </div>-->
+<!--                            <div id="energy__five" class="attribute__energy">-->
+<!--                            </div>-->
+                        </div>
+
+                        <div class="attribute__energy_level">
+                            Energy Level
+                        </div>
+
+
+
+
+                        <div class="requirements">
+                            <div class="attribute__hypoKid">
+                                <img class="attribute__hypoKid_icon" th:src="${goodWithKidsIcon}" alt="">
+                                Good with kids
+                            </div>
+
+                            <div class="attribute__hypoKid">
+                                <img class="attribute__hypoKid_icon" th:src="${hypoAllergenicIcon}" alt="">
+                                Hypoallergenic
+                            </div>
+                        </div>
+
+
+                    </ul>
+                    <div class="center__button">
+                        <button class="survey__button" onclick=location.href="/calendar">BOOK AN APPOINTMENT!</button>
+                    </div>
+                </div>
+
+                <div class="image__container">
+                    <img th:src="${pet.petImageUrl}" alt="picture of a pet" class="single__pet__Image">
+                    <div class="overlay">
+                        <p class="pet__description" th:text="${pet.petNeeds}"></p>
+                    </div>
+                </div>
+            </div>
+
+<!--            <div class="image__container">-->
+<!--                <img th:src="${pet.petImageUrl}" alt="picture of a pet" class="image">-->
+<!--                <div class="overlay">-->
+<!--                    <p class="pet__description" th:text="${pet.petDesc}"></p>-->
+<!--                </div>-->
+<!--            </div>-->
+
+
+
+            <!--            <p class="single__pet__description" th:text="${pet.petDesc}"></p>-->
+        </section>
+    </div>
+
+</div>
+
+</body>
+<div class="bgImage">
+    <img src="/images/BAB_backgroundImage.jpg" alt="background image">
+</div>
+
+<script src="/js/NavGenerator.js"></script>
+
+</html>
+
